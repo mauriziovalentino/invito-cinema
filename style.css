@@ -1,0 +1,695 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: white;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* =========================
+   SFONDO CINEMA
+========================= */
+
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.9)
+    ),
+
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+
+
+    background-size: cover;
+
+    background-position:center;
+
+
+    z-index:-2;
+
+
+    animation: cinemaZoom 25s infinite alternate;
+
+}
+
+
+
+body::after {
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        transparent 15%,
+        rgba(0,0,0,.85)
+    );
+
+
+    z-index:-1;
+
+}
+
+
+
+@keyframes cinemaZoom {
+
+    from {
+
+        transform:scale(1);
+
+    }
+
+
+    to {
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+
+
+/* =========================
+   CONTENITORE
+========================= */
+
+
+.overlay {
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px 20px;
+
+}
+
+
+
+
+/* =========================
+   CARD
+========================= */
+
+
+.card {
+
+    width:100%;
+
+    max-width:520px;
+
+
+    padding:40px 35px;
+
+
+    text-align:center;
+
+
+    background:
+
+    rgba(255,255,255,.10);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.25);
+
+
+    backdrop-filter:
+
+    blur(18px);
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.6);
+
+
+    animation:fadeIn 1s ease;
+
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================
+   VIDEO
+========================= */
+
+
+.hero-video,
+.success-video,
+.final-video {
+
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-video video,
+.success-video video,
+.final-video video {
+
+
+    width:170px;
+
+    height:170px;
+
+
+    object-fit:cover;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.5);
+
+}
+
+
+
+.final-video video {
+
+    width:150px;
+
+    height:150px;
+
+}
+
+
+
+/* =========================
+   TESTI
+========================= */
+
+
+h1 {
+
+    font-size:38px;
+
+    line-height:1.2;
+
+    margin:10px 0 15px;
+
+}
+
+
+
+h2 {
+
+    font-weight:500;
+
+}
+
+
+
+.intro {
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+
+.small {
+
+    opacity:.8;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+/* =========================
+   BOTTONI
+========================= */
+
+
+.buttons {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+
+
+button {
+
+    border:none;
+
+    padding:15px 30px;
+
+
+    border-radius:50px;
+
+
+    font-size:16px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+}
+
+
+
+
+#yesButton {
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ff416c,
+        #ff4b2b
+    );
+
+
+    color:white;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(255,65,108,.4);
+
+}
+
+
+
+#yesButton:hover {
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+#noButton {
+
+
+    background:white;
+
+
+    color:#333;
+
+
+    position:relative;
+
+
+    z-index:10;
+
+
+}
+
+
+
+#noButton:hover {
+
+    transform:scale(.95);
+
+}
+
+
+
+
+
+/* =========================
+   CONFERMA
+========================= */
+
+
+#confirmation {
+
+    margin-top:35px;
+
+    animation:fadeIn .8s ease;
+
+}
+
+
+
+#confirmation h2 {
+
+    font-size:30px;
+
+}
+
+
+
+
+
+/* =========================
+   ORARI
+========================= */
+
+
+.choices {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+
+
+
+.choice {
+
+
+    padding:18px;
+
+
+    border-radius:15px;
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.choice:hover {
+
+
+    background:
+
+    rgba(255,255,255,.25);
+
+
+    transform:scale(1.03);
+
+}
+
+
+
+.choice input {
+
+    display:none;
+
+}
+
+
+
+.choice span {
+
+    font-size:18px;
+
+}
+
+
+
+
+/* =========================
+   POPUP
+========================= */
+
+
+.popup {
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:20px;
+
+
+    background:
+
+    rgba(0,0,0,.75);
+
+
+    z-index:100;
+
+}
+
+
+
+.popup-box {
+
+
+    width:100%;
+
+
+    max-width:400px;
+
+
+    background:white;
+
+
+    color:#333;
+
+
+    padding:40px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    animation:popupShow .5s ease;
+
+}
+
+
+
+@keyframes popupShow {
+
+
+    from {
+
+        transform:scale(.7);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+.popup-box input {
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    margin:20px 0;
+
+
+    border-radius:10px;
+
+
+    border:1px solid #ddd;
+
+}
+
+
+
+.popup-box button {
+
+
+    width:100%;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ff416c,
+        #ff4b2b
+    );
+
+
+    color:white;
+
+}
+
+
+
+
+
+/* NASCOSTO */
+
+.hidden {
+
+    display:none;
+
+}
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:600px){
+
+
+    .card {
+
+        padding:35px 20px;
+
+    }
+
+
+
+    h1 {
+
+        font-size:30px;
+
+    }
+
+
+
+    .buttons {
+
+        flex-direction:column;
+
+    }
+
+
+
+    button {
+
+        width:100%;
+
+    }
+
+
+}

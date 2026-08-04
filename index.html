@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Invito Speciale</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="overlay">
+
+
+<div class="card">
+
+
+<!-- =========================
+SCHERMATA INIZIALE
+========================= -->
+
+
+<div id="initialScreen">
+
+
+<div class="hero-video">
+
+
+<video autoplay muted loop playsinline>
+
+<source src="assets/intro.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+
+
+
+<h1>
+
+Una serata speciale ti aspetta...
+
+</h1>
+
+
+
+<h2>
+
+Ciao Denise!
+
+</h2>
+
+
+
+<p class="intro">
+
+Dopo gli ultimi meeting è arrivato il momento della conferma.
+
+</p>
+
+
+
+<p class="small">
+
+Mi basta una conferma... al resto penso io 😊
+
+</p>
+
+
+
+
+<div class="buttons" id="buttons">
+
+
+<button id="yesButton">
+
+❤️ Ci sarò
+
+</button>
+
+
+
+<button id="noButton">
+
+🙈 No grazie
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- =========================
+SCHERMATA DOPO IL SI
+========================= -->
+
+
+<div class="hidden" id="confirmation">
+
+
+<div class="success-video">
+
+
+<video autoplay muted loop playsinline>
+
+
+<source src="assets/success.mp4" type="video/mp4">
+
+
+</video>
+
+
+</div>
+
+
+
+
+<h2>
+
+🎉 Fantastico!
+
+</h2>
+
+
+
+<p>
+
+Lo immaginavo 😊
+
+</p>
+
+
+
+<p>
+
+Ora manca soltanto scegliere quando andare.
+
+</p>
+
+
+
+
+
+<div class="choices">
+
+
+<h3>
+
+Quale orario preferisci?
+
+</h3>
+
+
+
+<label class="choice">
+
+
+<input
+type="radio"
+name="giorno"
+value="Venerdì 21:00">
+
+
+<span>
+
+🎬 Venerdì • 21:00
+
+</span>
+
+
+</label>
+
+
+
+
+
+<label class="choice">
+
+
+<input
+type="radio"
+name="giorno"
+value="Domenica 21:30">
+
+
+<span>
+
+🎬 Domenica • 21:30
+
+</span>
+
+
+</label>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- =========================
+POPUP NUMERO
+========================= -->
+
+
+<div class="popup hidden" id="popup">
+
+
+<div class="popup-box">
+
+
+
+<h2>
+
+Ottima scelta! 🎉
+
+</h2>
+
+
+
+<p>
+
+Ho registrato l'orario scelto.
+
+</p>
+
+
+
+<p>
+
+Inserisci il tuo numero e ti contatterò per gli ultimi dettagli.
+
+</p>
+
+
+
+
+<input
+type="tel"
+id="phone"
+placeholder="Numero di telefono">
+
+
+
+
+
+<button id="confirmButton">
+
+Conferma
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- =========================
+SCHERMATA FINALE
+========================= -->
+
+
+<div class="popup hidden" id="success">
+
+
+<div class="popup-box">
+
+
+
+<div class="final-video">
+
+
+<video autoplay muted loop playsinline>
+
+
+<source src="assets/finale.mp4" type="video/mp4">
+
+
+</video>
+
+
+</div>
+
+
+
+
+<h2>
+
+✅ Perfetto!
+
+</h2>
+
+
+
+
+<p>
+
+Grazie Denise ❤️
+
+</p>
+
+
+
+<p>
+
+Ti contatterò presto per gli ultimi dettagli.
+
+</p>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
